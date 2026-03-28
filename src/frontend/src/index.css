@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 0.97 0.008 200;
+    --foreground: 0.15 0.02 230;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.02 230;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 230;
+    --primary: 0.52 0.13 195;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.95 0.01 195;
+    --secondary-foreground: 0.32 0.09 205;
+    --muted: 0.95 0.01 200;
+    --muted-foreground: 0.46 0.01 0;
+    --accent: 0.92 0.04 195;
+    --accent-foreground: 0.32 0.09 205;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    --border: 0.91 0.01 0;
+    --input: 0.91 0.01 0;
+    --ring: 0.52 0.13 195;
+    --chart-1: 0.52 0.13 195;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.75 0.15 85;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.97 0.008 200;
+    --sidebar-foreground: 0.15 0.02 230;
+    --sidebar-primary: 0.52 0.13 195;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.92 0.04 195;
+    --sidebar-accent-foreground: 0.32 0.09 205;
+    --sidebar-border: 0.91 0.01 0;
+    --sidebar-ring: 0.52 0.13 195;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.25 0.09 205 / 0.95) 0%,
+    oklch(0.35 0.11 195 / 0.85) 50%,
+    oklch(0.45 0.13 190 / 0.5) 100%
+  );
+}
+
+.teal-dark {
+  color: oklch(0.32 0.09 205);
+}
+.bg-teal-dark {
+  background-color: oklch(0.32 0.09 205);
+}
+.bg-teal-primary {
+  background-color: oklch(0.52 0.13 195);
+}

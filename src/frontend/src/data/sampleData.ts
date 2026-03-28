@@ -1,0 +1,181 @@
+import type {
+  CommunityEvent,
+  DoctorProfile,
+  EventType,
+  Hospital,
+} from "../backend.d";
+import { AppointmentStatus, AppointmentType } from "../backend.d";
+
+export const sampleDoctors: DoctorProfile[] = [
+  {
+    id: 1n,
+    name: "Dr. Sarah Chen",
+    specialty: "Cardiologist",
+    bio: "Board-certified cardiologist with 15 years of experience in interventional cardiology.",
+    credentials: "MD, FACC - Johns Hopkins University",
+    verified: true,
+    available: true,
+    hospitalId: 1n,
+    rating: 5n,
+    reviewCount: 128n,
+    consultationFee: 200n,
+  },
+  {
+    id: 2n,
+    name: "Dr. James Okafor",
+    specialty: "Pediatrician",
+    bio: "Caring pediatrician specializing in child wellness and development.",
+    credentials: "MD, FAAP - Harvard Medical School",
+    verified: true,
+    available: true,
+    hospitalId: 1n,
+    rating: 5n,
+    reviewCount: 94n,
+    consultationFee: 150n,
+  },
+  {
+    id: 3n,
+    name: "Dr. Michael Torres",
+    specialty: "Orthopedist",
+    bio: "Sports medicine and orthopedic surgery specialist.",
+    credentials: "MD, FAAOS - Stanford University",
+    verified: true,
+    available: false,
+    hospitalId: 2n,
+    rating: 4n,
+    reviewCount: 67n,
+    consultationFee: 250n,
+  },
+  {
+    id: 4n,
+    name: "Dr. Priya Sharma",
+    specialty: "Neurologist",
+    bio: "Expert in neurological disorders and brain health.",
+    credentials: "MD, PhD - Columbia University",
+    verified: true,
+    available: true,
+    hospitalId: 2n,
+    rating: 5n,
+    reviewCount: 45n,
+    consultationFee: 300n,
+  },
+  {
+    id: 5n,
+    name: "Dr. Emily Watson",
+    specialty: "Dermatologist",
+    bio: "Dermatologist specializing in skin cancer detection and cosmetic procedures.",
+    credentials: "MD, FAAD - Yale Medical School",
+    verified: true,
+    available: true,
+    hospitalId: 3n,
+    rating: 4n,
+    reviewCount: 82n,
+    consultationFee: 180n,
+  },
+  {
+    id: 6n,
+    name: "Dr. Robert Kim",
+    specialty: "General Practitioner",
+    bio: "Comprehensive primary care physician focused on preventive medicine.",
+    credentials: "MD - University of Michigan",
+    verified: false,
+    available: true,
+    hospitalId: 3n,
+    rating: 4n,
+    reviewCount: 203n,
+    consultationFee: 120n,
+  },
+];
+
+export const sampleHospitals: Hospital[] = [
+  {
+    id: 1n,
+    name: "City Medical Center",
+    address: "123 Healthcare Blvd, Downtown",
+    departments: [
+      "Cardiology",
+      "Pediatrics",
+      "Emergency",
+      "Surgery",
+      "Oncology",
+    ],
+    erWaitMinutes: 12n,
+    rating: 5n,
+    reviewCount: 342n,
+    description:
+      "Premier urban hospital with state-of-the-art facilities and a dedicated emergency department.",
+    featuredDepartment: "Cardiology",
+    isSponsored: true,
+  },
+  {
+    id: 2n,
+    name: "Westside General Hospital",
+    address: "456 Medical Drive, West District",
+    departments: ["Orthopedics", "Neurology", "Radiology", "ICU"],
+    erWaitMinutes: 25n,
+    rating: 4n,
+    reviewCount: 189n,
+    description:
+      "Specialized center for orthopedic and neurological care with robotic surgery capabilities.",
+    featuredDepartment: "Orthopedics",
+    isSponsored: false,
+  },
+  {
+    id: 3n,
+    name: "Community Health Institute",
+    address: "789 Wellness Ave, Suburbs",
+    departments: ["Dermatology", "Primary Care", "Mental Health", "Nutrition"],
+    erWaitMinutes: 8n,
+    rating: 4n,
+    reviewCount: 156n,
+    description:
+      "Community-focused healthcare with a holistic approach to wellness and preventive care.",
+    featuredDepartment: "Mental Health",
+    isSponsored: false,
+  },
+];
+
+export const sampleEvents: CommunityEvent[] = [
+  {
+    id: 1n,
+    title: "Free Blood Pressure Screening",
+    description:
+      "Join our team at Riverside Park for free blood pressure and diabetes screenings. No appointment needed.",
+    eventType: { popupClinic: null } as unknown as EventType,
+    location: "Riverside Park, Main Entrance",
+    dateTime: "2026-04-15T10:00:00",
+    organizer: "City Medical Center",
+  },
+  {
+    id: 2n,
+    title: "Ask the Cardiologist: Heart Health 2026",
+    description:
+      "Live Q&A session with Dr. Sarah Chen on heart disease prevention, nutrition, and the latest treatments.",
+    eventType: { webinar: null } as unknown as EventType,
+    location: "Online (Zoom)",
+    dateTime: "2026-04-20T18:00:00",
+    organizer: "MediConnect",
+  },
+  {
+    id: 3n,
+    title: "Shop with a Nutritionist",
+    description:
+      "Join dietitian Maria Lopez at Green Valley Grocers for a 90-minute tour on reading labels and eating for heart health.",
+    eventType: { nutritionTour: null } as unknown as EventType,
+    location: "Green Valley Grocers, Oak Street",
+    dateTime: "2026-04-25T09:00:00",
+    organizer: "Community Health Institute",
+  },
+  {
+    id: 4n,
+    title: "Mental Health & Longevity Webinar",
+    description:
+      "Expert panel discussion on the connection between mental wellness and longevity. Interactive Q&A included.",
+    eventType: { webinar: null } as unknown as EventType,
+    location: "Online (YouTube Live)",
+    dateTime: "2026-05-02T17:00:00",
+    organizer: "Westside General Hospital",
+  },
+];
+
+export { AppointmentStatus, AppointmentType };
